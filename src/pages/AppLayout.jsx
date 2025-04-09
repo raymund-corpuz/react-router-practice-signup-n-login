@@ -5,8 +5,8 @@ import styles from "./AppLayout.module.css";
 
 const AppLayout = () => {
   return (
-    <div className={styles.app}>
-      <Sidebar />
+    // <div className={styles.app}>
+    <div>
       <Main />
     </div>
   );

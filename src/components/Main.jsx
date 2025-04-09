@@ -3,32 +3,63 @@ import styles from "./Main.module.css";
 
 const Main = () => {
   return (
-    <div className={styles.mainContent}>
-      <div className={styles.header}>
-        <h1 className={styles.welcomeMessage}>Welcome to Your Dashboard</h1>
-        <p className={styles.subtitle}>
-          Here's an overview of your current status.
-        </p>
-      </div>
+    <div className={styles.dashboard}>
+      <header className={styles.header}>
+        <h1 className={styles.headerTitle}>HR Services Dashboard</h1>
+        <nav className={styles.navigation}>
+          <ul>
+            <li>
+              <a href="#" className={styles.navLink}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLink}>
+                Employee Info
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLink}>
+                Leave Requests
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLink}>
+                Payroll
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <div className={styles.cardContainer}>
-        <div className={styles.card}>
-          <h3>Attendance</h3>
-          <p>95% this month</p>
-        </div>
-        <div className={styles.card}>
-          <h3>Overtime</h3>
-          <p>12 hours</p>
-        </div>
-        <div className={styles.card}>
-          <h3>Leave</h3>
-          <p>2 days taken</p>
-        </div>
-        <div className={styles.card}>
-          <h3>Change Shift</h3>
-          <p>Next: Morning</p>
-        </div>
-      </div>
+      <main className={styles.mainContent}>
+        <section className={styles.employeeInfo}>
+          <h2 className={styles.sectionTitle}>Employee Info</h2>
+          <p className={styles.sectionDescription}>
+            Manage employee details and records.
+          </p>
+        </section>
+
+        <section className={styles.leaveRequests}>
+          <h2 className={styles.sectionTitle}>Leave Requests</h2>
+          <p className={styles.sectioDescription}>
+            View and approve leave requests.
+          </p>
+        </section>
+
+        <section className={styles.payroll}>
+          <h2 className={styles.sectionTitle}>Payroll</h2>
+          <p className={styles.sectionDescription}>
+            Manage employee salaries and payments.
+          </p>
+        </section>
+      </main>
+
+      <footer className={styles.footer}>
+        <p className={styles.footerText}>
+          © 2025 HR Services. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 };
